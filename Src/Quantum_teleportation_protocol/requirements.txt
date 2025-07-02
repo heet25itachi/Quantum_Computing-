@@ -1,2 +1,5 @@
 qiskit>=0.43.0
 matplotlib>=3.5.0
+
+
+How to Install it =>    pip install -r requirements.txt
