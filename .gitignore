@@ -1,0 +1,75 @@
+# --- PYTHON ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.pyd
+*.so
+*.dll
+*.dylib
+*.env
+*.venv
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+*.log
+
+# --- LATEX ---
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.run.xml
+
+# --- QISKIT / CIRCUIT / IBM QUANTUM ---
+*.qpy
+*.qiskit
+*.joblib
+*.hdf5
+*.ibmq*
+
+# --- JUPYTER NOTEBOOKS ---
+.ipynb_checkpoints/
+
+# --- BUILD / CACHE / PLOTS ---
+build/
+dist/
+.cache/
+__results__/
+__outputs__/
+
+# --- VS CODE / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# --- SYSTEM FILES ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- GITBOOK / DOC BUILD ---
+_book/
+node_modules/
+
+# --- EXCEPTIONS: KEEP THESE ---
+!*.pdf
+!*.tex
+!*.ipynb
+!*.md
+
+# Optional: Keep requirements.txt & config
+!requirements.txt
+!*.json
