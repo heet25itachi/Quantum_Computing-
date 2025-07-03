@@ -1,4 +1,6 @@
-# Quantum_Computing-
+# Quantum_Computing-  
+
+
 
 # 🧠 Quantum_Computing-
 
@@ -18,15 +20,7 @@ This repository is an advanced and diverse collection of quantum computing work 
 
 ---
 
-💻 Requirements
-Install using pip:
 
-
-pip install -r requirements.txt
- 
-Or manually:
-
-pip install qiskit numpy matplotlib
 
 **📈 Quantum Protocols Implemented**
  **Quantum Teleportation Protocol**
@@ -34,7 +28,7 @@ pip install qiskit numpy matplotlib
 **Port-Based Quantum Teleportation (No correction gate)**
 
  **Quantum Secret Sharing (coming soon)**
-
+ 
 **Quantum Key Distribution (QKD) – BB84 Protocol (planned)**
 
 🧪 Simulations / Experiments
@@ -70,3 +64,4 @@ This repository is licensed under the **Apache License.**
 
 ------**"Information is physical" — Rolf Landauer
 "Teleportation is not science fiction. It's quantum reality."**
+
