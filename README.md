@@ -41,7 +41,7 @@ Quantum Researcher | AI/ML Developer | Blockchain Innovator | Mathematician | Po
 **[GitHub Profile](https://github.com/heet25itachi/)**
 
 📖 License
-This repository is licensed under the **Apache License.**
+This repository is licensed under the **Apache-2.0 License.**
 
 
 🌌 Coming Soon
