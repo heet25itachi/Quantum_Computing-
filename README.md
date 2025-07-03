@@ -25,15 +25,6 @@ This repository is an advanced and diverse collection of quantum computing work 
 
 
 
-**📈 Quantum Protocols Implemented**
- **Quantum Teleportation Protocol**
-
-**Port-Based Quantum Teleportation (No correction gate)**
-
- **Quantum Secret Sharing (coming soon)**
- 
-**Quantum Key Distribution (QKD) – BB84 Protocol (planned)**
-
 
 👨‍💻 Author
 Heet Trivedi
@@ -44,15 +35,7 @@ Quantum Researcher | AI/ML Developer | Blockchain Innovator | Mathematician | Po
 This repository is licensed under the **Apache-2.0 License.**
 
 
-🌌 Coming Soon
 
-**Visualizer for teleportation flow (SVG/TikZ)**
-
-**Tensor network representation**
-
-**Variants: Deterministic PBT, Approximate PBT**
-
-**More quantum paper submissions**
 
 
 
