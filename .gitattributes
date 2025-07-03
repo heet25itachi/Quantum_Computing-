@@ -1,0 +1,35 @@
+# --- TEXT NORMALIZATION ---
+* text=auto
+
+# --- PYTHON ---
+*.py text eol=lf
+
+# --- LATEX ---
+*.tex text
+*.bib text
+
+# --- JUPYTER NOTEBOOKS ---
+*.ipynb text
+*.ipynb diff=jupyter-notebook
+
+# --- PDF / IMAGES / BINARY FILES ---
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg binary
+
+# --- CONFIG / MARKDOWN / DOCS ---
+*.md text
+*.json text
+*.yaml text
+*.yml text
+requirements.txt text
+
+# --- CUSTOM: GITBOOK or DOCS ---
+_book/* linguist-vendored
+
+# --- FORCE GITHUB LINGUIST TO DETECT MAIN LANGUAGES ---
+*.py linguist-language=Python
+*.ipynb linguist-language=Jupyter Notebook
+*.tex linguist-language=TeX
