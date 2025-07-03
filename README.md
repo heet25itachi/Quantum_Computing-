@@ -22,7 +22,11 @@ This repository is an advanced and diverse collection of quantum computing work 
 - 📦 Modular structure for code + theory + simulation + results
 
 ---
+🔗 Standard Quantum Teleportation
+<img src="outputs/bell_circuit.png" width="500"/>
 
+📊 Fidelity vs Ports (Port-Based Protocol)
+<img src="outputs/fidelity_plot.png" width="500"/>
 
 
 
