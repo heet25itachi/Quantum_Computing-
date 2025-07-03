@@ -34,15 +34,6 @@ This repository is an advanced and diverse collection of quantum computing work 
  
 **Quantum Key Distribution (QKD) – BB84 Protocol (planned)**
 
-🧪 Simulations / Experiments
-
-🔁 Fidelity comparison between standard and port-based teleportation
-
-📊 Plots for fidelity vs number of ports
-
-⏱️ Time complexity studies
-
-📤 PDF and TikZ-based visualizations
 
 👨‍💻 Author
 Heet Trivedi
