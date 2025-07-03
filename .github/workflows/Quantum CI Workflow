@@ -1,0 +1,68 @@
+# Name of the workflow, displayed in the GitHub Actions tab
+name: Quantum Protocol CI
+
+# Events that trigger this workflow
+on:
+  # Trigger on pushes to the 'main' branch
+  push:
+    branches:
+      - main
+
+  # Trigger on pull requests targeting the 'main' branch
+  pull_request:
+    branches:
+      - main
+
+  # Allow manually triggering the workflow from the GitHub UI
+  workflow_dispatch:
+
+# Define the jobs that make up this workflow
+jobs:
+  # This is a single job named 'build_and_test'
+  build_and_test:
+    # Specify the runner environment for this job. 'ubuntu-latest' is a common choice.
+    runs-on: ubuntu-latest
+
+    # Define the steps to be executed within this job
+    steps:
+      # Step 1: Checkout the repository code
+      # This action checks out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python environment
+      # This action sets up a Python environment for your workflow.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          # Specify the Python version. '3.x' will pick the latest stable 3.x version.
+          python-version: '3.x'
+
+      # Step 3: Install dependencies
+      # This step installs the required Python packages using pip.
+      # It first upgrades pip and then installs packages from requirements.txt.
+      # If requirements.txt is not present, it falls back to manual installation.
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Check if requirements.txt exists and install from it
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            # Fallback to manual installation if requirements.txt is not found
+            echo "requirements.txt not found, installing manually."
+            pip install qiskit numpy matplotlib
+          fi
+
+      # Step 4: Run a basic check or placeholder for tests
+      # This step is a placeholder. You should replace `python your_example_script.py`
+      # with commands to run your actual tests or a representative example.
+      # For instance, if you have a test suite, you might use `pytest` or `python -m unittest`.
+      - name: Run basic check/tests
+        run: |
+          echo "Running a placeholder check. Replace this with your actual test commands!"
+          # Example: If you have a script named 'teleportation_example.py' in your root:
+          # python teleportation_example.py
+          # Or if you have a 'tests' directory with pytest:
+          # pip install pytest
+          # pytest tests/
