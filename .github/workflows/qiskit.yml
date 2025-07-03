@@ -1,0 +1,64 @@
+# Name of the workflow, displayed in the GitHub Actions tab
+name: Qiskit Specific Checks
+
+# Events that trigger this workflow
+on:
+  # Trigger on pushes to the 'main' branch
+  push:
+    branches:
+      - main
+
+  # Trigger on pull requests targeting the 'main' branch
+  pull_request:
+    branches:
+      - main
+
+  # Allow manually triggering the workflow from the GitHub UI
+  workflow_dispatch:
+
+# Define the jobs that make up this workflow
+jobs:
+  # This is a single job named 'run_qiskit_tests'
+  run_qiskit_tests:
+    # Specify the runner environment for this job.
+    runs-on: ubuntu-latest
+
+    # Define the steps to be executed within this job
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x' # Use the latest 3.x version of Python
+
+      # Step 3: Install Qiskit and other dependencies
+      # This step prioritizes requirements.txt but provides a fallback for Qiskit, numpy, matplotlib.
+      - name: Install Qiskit and dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "requirements.txt not found, installing Qiskit, numpy, matplotlib manually."
+            pip install qiskit numpy matplotlib
+          fi
+
+      # Step 4: Run Qiskit-specific examples or tests
+      # This is a crucial placeholder. You should replace the 'echo' command
+      # with commands that execute your Qiskit code or run tests.
+      # Examples:
+      #   - python your_qiskit_teleportation_script.py
+      #   - pytest tests/qiskit_tests/
+      - name: Execute Qiskit code or tests
+        run: |
+          echo "Placeholder for Qiskit-specific code execution or tests."
+          echo "For example, you might run: python your_qiskit_teleportation_script.py"
+          # Example: If you have a Qiskit example script in your root directory:
+          # python my_qiskit_example.py
+          # Example: If you use pytest for Qiskit-specific tests:
+          # pip install pytest
+          # pytest qiskit_tests/
