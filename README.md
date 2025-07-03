@@ -5,7 +5,12 @@
 # 🧠 Quantum_Computing-
 
 > A collection of quantum computing research, protocols, and experiments using Qiskit, Python, and LaTeX.
+> 
+📈 Quantum Protocols Implemented
+This repository contains implementations of various quantum protocols, focusing on foundational concepts in quantum information and communication.
 
+What is Quantum Computing?
+Quantum computing is a new type of computation that harnesses the phenomena of quantum mechanics, such as superposition, entanglement, and quantum interference, to perform calculations. Unlike classical computers that store information as bits (0s or 1s), quantum computers use qubits, which can represent both 0 and 1 simultaneously. This fundamental difference allows quantum computers to solve certain complex problems much faster than classical computers, particularly in fields like cryptography, drug discovery, material science, and artificial intelligence.
 ---
 
 ## 📌 Overview
