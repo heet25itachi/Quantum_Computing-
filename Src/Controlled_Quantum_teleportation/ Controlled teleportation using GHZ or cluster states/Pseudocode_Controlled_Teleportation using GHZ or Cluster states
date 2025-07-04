@@ -1,0 +1,17 @@
+Algorithm: Controlled Quantum Teleportation using GHZ
+
+1. Input: Qubit |ψ⟩ = α|0⟩ + β|1⟩
+2. Create GHZ state among q1, q2, q3
+   - Apply H on q1
+   - Apply CNOT(q1 → q2), then CNOT(q2 → q3)
+3. Alice:
+   - Apply CNOT(q0 → q1)
+   - Apply H(q0)
+   - Measure q0 → c0, q1 → c1
+4. Charlie (controller):
+   - Measure q2 → c2
+5. Bob:
+   - Wait for classical bits c0, c1, c2
+   - If c2 == 1, apply Pauli corrections (X, Z) based on (c0, c1) to q3
+   - Else discard or block operation
+6. Output: Teleported state on q3, conditionally controlled by Charlie
