@@ -1,0 +1,46 @@
+function BidirectionalQuantumTeleportation():
+    # Step 1: Initialize qubits
+    Q0 ← Alice's input qubit (|ψ_A⟩)
+    Q1 ← Alice's entanglement qubit
+    Q2 ← Bob's entanglement qubit
+    Q3 ← Bob's input qubit (|ψ_B⟩)
+    
+    # Step 2: Prepare input states
+    prepare_state(Q0, alpha_A, beta_A)
+    prepare_state(Q3, alpha_B, beta_B)
+
+    # Step 3: Create shared entangled Bell pair between Q1 and Q2
+    H(Q1)
+    CNOT(Q1, Q2)
+
+    # Step 4: Alice performs Bell measurement on Q0 and Q1
+    CNOT(Q0, Q1)
+    H(Q0)
+    measure Q0 → C0
+    measure Q1 → C1
+
+    # Step 5: Bob performs Bell measurement on Q3 and Q2
+    CNOT(Q3, Q2)
+    H(Q3)
+    measure Q3 → C2
+    measure Q2 → C3
+
+    # Step 6: Classical communication between Alice and Bob
+    # Alice sends (C0, C1) to Bob
+    # Bob sends (C2, C3) to Alice
+
+    # Step 7: Bob applies correction on Q2
+    if C1 == 1:
+        Z(Q2)
+    if C0 == 1:
+        X(Q2)
+
+    # Step 8: Alice applies correction on Q1
+    if C3 == 1:
+        Z(Q1)
+    if C2 == 1:
+        X(Q1)
+
+    # Step 9: Teleportation complete
+    # Q2 now holds |ψ_A⟩ (teleported from Alice)
+    # Q1 now holds |ψ_B⟩ (teleported from Bob)
